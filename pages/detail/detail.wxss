@@ -1,0 +1,36 @@
+.news-wrapper {
+  margin: 50rpx 30rpx;
+}
+
+.news-title {
+  font-size: 50rpx;
+  line-height: 70rpx;
+}
+
+.news-item {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  opacity: 0.5;
+  font-size: 25rpx;
+  line-height: 35rpx;
+}
+
+.source {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.news-p {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  opacity: 0.8;
+}
+
+.news-image {
+  text-align: "center";
+  width: 700rpx;
+  height: 400rpx;
+}

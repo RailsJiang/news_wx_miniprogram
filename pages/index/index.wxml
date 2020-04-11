@@ -1,0 +1,19 @@
+<view class="swiper-tab">
+  <view class = "swiper-tab-list" wx:for="{{typeList}}">
+    <view class = "{{currentTab==item.order? 'on': ''}}" data-current="{{item.order}}" bindtap="swichNav">{{item.name}}</view>
+  </view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight -31}}px" bindchange="bindChange">
+  <swiper-item wx:for="{{typeList}}">
+    <scroll-view scroll-y="true" scroll-y="true" style="height: {{winHeight -31}}px">
+      <view class= "news-item" wx:for="{{resultDict[item.type]}}" data-nid='{{item.id}}' bindtap='onTapItem'>
+        <view class="title-wrapper">
+          <view class="title">{{item.title}}</view>
+          <view class="source">{{item.source}}  {{item.timeStr}}</view>
+        </view>
+        <image class="first-image" src="{{item.firstImage}}" mode="aspectFit"></image>
+    </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

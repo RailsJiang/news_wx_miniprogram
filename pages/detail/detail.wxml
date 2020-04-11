@@ -1,0 +1,12 @@
+<view class= "news-wrapper">
+  <view class='news-title'>{{pageInfo.title}}</view>
+  <view class='news-item'>
+    <view class='source'>{{pageInfo.source}}  {{pageInfo.dateStr}}</view>
+    <view class='read-count'>阅读{{pageInfo.readCount}}</view>
+  </view>
+  <view class='news-content' wx:for="{{pageInfo.content}}">
+    <view wx:if="{{item.type==='p'}}" class='news-p'>{{item.text}}</view>
+    <image wx:if="{{item.type==='image'}}" class="news-image" src="{{item.src}}" mode="aspectFit"></image>
+  </view>
+</view>
+

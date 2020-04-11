@@ -1,0 +1,58 @@
+.swiper-tab {
+  background-color:	#00BFFF;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 14.28%;
+  color: #fff;
+}
+
+.on {
+  font-weight:bold;
+  border-bottom: 5rpx solid #fff;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.news-item {
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  margin: 0 20rpx;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+
+.title-wrapper {
+  width: 66.66%;
+  text-align: left;
+}
+
+.title {
+  font-size: 30rpx;
+  line-height: 42rpx;
+}
+
+.source {
+  opacity: 0.5;
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  line-height: 35rpx;
+}
+
+.first-image {
+  margin-left: 20rpx;
+  text-align: right;
+  width: 200rpx;
+  height: 150rpx;
+}
