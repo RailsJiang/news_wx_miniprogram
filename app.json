@@ -6,8 +6,8 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#00BFFF",
-    "navigationBarTitleText": "",
-    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "快读•咨询",
+    "navigationBarTextStyle": "white",
     "enablePullDownRefresh": true
   },
   "style": "v2",
