@@ -7,13 +7,13 @@ Page({
     currentTab: 0,
     resultDict: {},
     typeList: [
-      {name: '国内', order: 0, type: 'gn'},
-      {name: '国际', order: 1, type: 'gj'},
-      {name: '财经', order: 2, type: 'cj'},
-      {name: '娱乐', order: 3, type: 'yl'},
-      {name: '军事', order: 4, type: 'js'},
-      {name: '体育', order: 5, type: 'ty'},
-      {name: '其他', order: 6, type: 'other'}
+      {name: '国内', type: 'gn'},
+      {name: '国际', type: 'gj'},
+      {name: '财经', type: 'cj'},
+      {name: '娱乐', type: 'yl'},
+      {name: '军事', type: 'js'},
+      {name: '体育', type: 'ty'},
+      {name: '其他', type: 'other'}
     ]
   },
   onLoad(){
@@ -73,10 +73,16 @@ Page({
         type: newsType
       },
       success: res => {
-        let result = res.data.result
-        for (var i=0; i<result.length; i++) {
-          result[i]['timeStr'] = common.getTime(result[i]['date'])
-        }
+        let result = res.data.result.map((item) => {
+          return {
+            id: item.id,
+            firstImage: item.firstImage,
+            source: item.source,
+            title: item.title,
+            date: item.date,
+            timeStr: common.getTime(item.date)
+          }
+        })
         let resultDict = this.data.resultDict
         resultDict[newsType] = result
         this.setData({

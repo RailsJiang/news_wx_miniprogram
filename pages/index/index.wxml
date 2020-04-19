@@ -1,6 +1,6 @@
 <view class="swiper-tab">
   <view class = "swiper-tab-list" wx:for="{{typeList}}">
-    <view class = "{{currentTab==item.order? 'on': ''}}" data-current="{{item.order}}" bindtap="swichNav">{{item.name}}</view>
+    <view class = "{{currentTab==index? 'on': ''}}" data-current="{{index}}" bindtap="swichNav">{{item.name}}</view>
   </view>
 </view>
 
@@ -12,7 +12,8 @@
           <view class="title">{{item.title}}</view>
           <view class="source">{{item.source}}  {{item.timeStr}}</view>
         </view>
-        <image class="first-image" src="{{item.firstImage}}" mode="aspectFit"></image>
+        <image wx:if="{{item.firstImage}}" class="first-image" src="{{item.firstImage}}" mode="aspectFit"></image>
+        <image wx:else class="first-image" src="/images/default.jpeg" mode="aspectFit"></image>
     </view>
     </scroll-view>
   </swiper-item>
